@@ -9,7 +9,9 @@ namespace MasBahh
     internal class Program
     {
         static void Main(string[] args)
+
         {
+            DateTime agora = DateTime.Now;
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
             Console.WriteLine("Digite sua idade");
@@ -50,18 +52,20 @@ namespace MasBahh
                 resposta = 2;
             }
 
-            if (resposta == 1) 
+            if (resposta == 1)
             {
 
                 Console.WriteLine("qual seria sua reclamaçao");
                 String reclamacao = Console.ReadLine();
                 Console.WriteLine("sua reclamaçao foi: " + reclamacao);
-                Console.WriteLine("sua reclamaçao foi registrada com sucesso, em breve entraremos em contato com você para resolver sua reclamaçao");
+                Console.WriteLine("sua reclamaçao foi registrada com sucesso " + nome + " em breve entraremos em contato com você para resolver sua reclamaçao");
+                Console.WriteLine("Data e hora da reclamação: " + agora);
 
             }
             else if (resposta == 2)
             {
                 Console.WriteLine("Obrigado por usar nosso sistema de reclamações");
+                Console.WriteLine("Data e hora do uso do sistema: " + agora);
             }
             else
             {
@@ -69,6 +73,7 @@ namespace MasBahh
 
 
             }
+        
         }
     }
 }
